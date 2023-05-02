@@ -1,6 +1,9 @@
 <?php
 
-require_once '../Model/TodoList.php';
-require_once '../BusinessLogic/ShowTodolist.php';
+require_once "./Model/TodoList.php";
+require_once "./BusinessLogic/ShowTodoList.php";
 
-echo "Hellow";
+$todoList[1] = "Belajar PHP Dasar";
+$todoList[2] = "Belajar OOP PHP";
+$todoList[3] = "Belajar PHP Database";
+showTodoList();
