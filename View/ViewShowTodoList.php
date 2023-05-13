@@ -1,38 +1,43 @@
 <?php
 
-require_once './Helper/Input.php';
+require_once './Model/TodoList.php';
 require_once './BusinessLogic/ShowTodoList.php';
-require_once 'ViewAddTodoList.php';
-require_once 'ViewAddTodoList.php';
-require_once 'ViewAddTodoList.php';
+require_once 'View/ViewAddTodoList.php';
+require_once 'View/ViewRemoveTodoList.php';
+require_once './Helper/Input.php';
 
 
 function viewShowTodoList()
 {
-    while (true) {
+    while(true){
+        
+        showTodoList();
 
-    showTodoList();
+        echo "MENU TO DO LIST" . PHP_EOL;
+        echo "1. Tambah Todo" . PHP_EOL;
+        echo "2. Hapus Todo" . PHP_EOL;
+        echo "y. Keluar" . PHP_EOL;
 
-    echo "MENU TO DO LIST";
-    echo "1. Tambah Todo" . PHP_EOL;
-    echo "2. Hapus Todo" . PHP_EOL;
-    echo "x. Keluar" . PHP_EOL;
+        $pilihan = input("Pilih");
 
-    $pilihan = input("Pilih");
-
-    if ($pilihan == "1")
-    {
-        viewAddTodoList();
-    } else if ($pilihan == "2")
-    {
-        viewRemoveTodoList();
-    } else if ($pilihan == "x")
-    {
-        break;
-    } else{
-        echo "Pilihan tidak ada";
-    }
+        if ($pilihan == "1")
+        {
+            viewAddTodoList();
+        } 
+        else if ($pilihan == "2")
+        {
+            viewRemoveTodoList();
+        } 
+        else if ($pilihan == "y")
+        {
+            break;
+        } 
+        else
+        {
+            echo "Pilihan tidak ada" . PHP_EOL;
+        }
     }
     echo "Sampai jumpa lagi";
+    
 
 }

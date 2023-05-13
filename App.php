@@ -8,4 +8,8 @@ require_once 'View/ViewAddTodoList.php';
 require_once 'View/ViewShowTodoList.php';
 require_once 'View/ViewRemoveTodoList.php';
 
-echo "Aplikasi TodoList";
+echo "Aplikasi TodoList" . PHP_EOL;
+addTodoList("Belajar PHP Dasar");
+addTodoList("Belajar PHP OOP");
+addTodoList("Belajar PHP WEB");
+viewShowTodoList();
